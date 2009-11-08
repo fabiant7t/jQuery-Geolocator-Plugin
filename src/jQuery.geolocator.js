@@ -10,6 +10,8 @@ jQuery.geolocator = {
                     speed: pos.coords.speed,
                     accuracy: pos.coords.accuracy
                 });
+            }, function() { // When an error occured, e.g. the user denied geolocation ...
+                callback({});
             });
             return true;
         } else {
