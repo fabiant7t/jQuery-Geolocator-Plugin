@@ -1,0 +1,39 @@
+jQuery Geolocator Plugin
+By Fabian Topfstedt - http://www.topfstedt.de
+Released under the MIT license
+ 
+Description:
+------------
+A jQuery plugin to geolocate the client using HTML5 geolocation API or google loader.
+ 
+Requires:
+---------
+jQuery (1.3)
+ 
+Usage:
+------
+After adding the script sources of jQuery and the plugin, you can
+add the following snippet to geolocate the clients.
+ 
+var geolocation_callback = function(geolocation_data) {
+    console.dir(geolocation_data);
+}
+ 
+$(document).ready(function(){
+    $.geolocator.geolocate({ callback: geolocation_callback });
+});
+ 
+Callback values:
+----------------
+The callback gets called with an geolocation_data object containing the following properties:
+* latitude
+* longitude
+* altitude
+* heading
+* speed
+* accuracy
+All of the properties are available, but they might be set to null, which is the default value. 
+
+How geolocation works:
+----------------------
+If the client's browser supports HTML5 Geolocation API, it gently asks the user for permission to geolocate him and returns the data. If not, it uses Google, so please load Google's jsapi (See http://code.google.com/apis/ajax/documentation/#ClientLocation).
