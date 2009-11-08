@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Geolocator Demo</title>
+        <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'></script>
+        <script type='text/javascript' src='http://github.com/fabiant7t/jQuery-Geolocator-Plugin/raw/master/src/jQuery.geolocator.js'></script>
+        <script type="text/javascript" charset="utf-8">
+                var geodata_callback = function(geolocation_data) {
+                    $.each(geolocation_data, function(k, v) {
+                        $('#geodata').append('<li>' + k + ': ' + v + '</li>');
+                    });
+                }
+
+                $(document).ready(function() {
+                        $.geolocator.geolocate({
+                                callback: geodata_callback,
+                        });
+                });
+        </script>
+</head>
+
+<body>
+<h1>Geolocation Demo</h1>
+<ul id='geodata'></ul>
+</body>
+</html>
