@@ -34,7 +34,7 @@ jQuery.geolocator = {
         var kwargs = jQuery.extend(default_kwargs, kwargs);
 
         if(!kwargs.callback || !jQuery.isFunction(kwargs.callback)) {
-            alert('You need to pass a proper callback method for geocoding!');
+            alert('You need to pass a proper callback method to geolocate!');
             return false;
         }
         
