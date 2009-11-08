@@ -12,7 +12,7 @@ jQuery.geolocator = {
                 });
             }, function() {
                 callback({});
-            });
+            }, { maximumAge: 1 });
             return true;
         } else {
             return false;
