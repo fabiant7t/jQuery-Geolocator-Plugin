@@ -10,6 +10,8 @@ jQuery.geolocator = {
                     speed: pos.coords.speed,
                     accuracy: pos.coords.accuracy
                 });
+            }, function() {
+                callback({});
             });
             return true;
         } else {
