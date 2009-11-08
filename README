@@ -36,4 +36,6 @@ All of the properties are available, but they might be set to null, which is the
 
 How geolocation works:
 ----------------------
-If the client's browser supports HTML5 Geolocation API, it gently asks the user for permission to geolocate him and returns the data. If not, it uses Google, so please load Google's jsapi (See http://code.google.com/apis/ajax/documentation/#ClientLocation).
+If the client's browser supports HTML5 Geolocation API, it gently asks the user for permission to geolocate 
+him and returns the data. If not, it uses Google, so please load Google's jsapi 
+(See http://code.google.com/apis/ajax/documentation/#ClientLocation).
